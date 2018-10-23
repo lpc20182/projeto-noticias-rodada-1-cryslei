@@ -27,3 +27,7 @@ class MensagemDeContatoAdmin(admin.ModelAdmin):
 @admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('nome',)}
+    
+@admin.register(Anuncio)
+class AnuncioAdmin(admin.ModelAdmin):
+    readonly_fields = ('data_de_cadastro',)
