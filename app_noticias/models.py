@@ -67,3 +67,12 @@ class MensagemDeContato(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Anuncio(models.Model):
+    class Meta:
+        verbose_name = 'Anúncio'
+        verbose_name_plural = 'Anúncios'
+
+    data_de_cadastro = models.DateTimeField(auto_now_add=True)
+    imagem = models.ImageField(height_field=None, width_field=None, max_length=100,null=True, blank=True)
